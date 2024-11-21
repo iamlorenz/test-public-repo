@@ -16,6 +16,11 @@ app.get("/coinflip", (req, res) => {
   res.send(`Your coin flip result is: ${coinFlip}`);
 });
 
+app.get("/dice", (req, res) => {
+  const diceRoll = Math.floor(Math.random() * 7) + 1;
+  res.send(`Your dice roll is: ${diceRoll}`);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
